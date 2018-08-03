@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Hoja de Trabajo 2}
+\author{bauer181369 }
+\date{August 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Ejercicio 1}
+
+Demostrar usando Inducción:\\
+
+$\forall n.$ $n^3 \ge n^2$\\
+
+$n = n + 1$\\
+
+$(n + 1)^3 \ge (n + 1)^2$\\
+
+$\displaystyle\frac{(n + 1)^3}{(n + 1)^2} \ge 1 $\\
+
+$(n + 1) \ge 1$\\
+
+$n \ge 0$
+
+$ n \in N $
+
+\section{Ejercicio 2}
+
+Demostrar utilizando la desigualdad de Bertholi:\\
+
+$\forall n.$ $(1 + x)^n \ge nx$\\
+
+Donde $n \in N$, $x \in Q$ y $x \ge -1$\\
+
+$(1 + x)^n \ge nx$\\
+
+Es posible demostrar esto demostrando una propiedad mas fuerte donde el lado izquierdo es mayor que $nx + 1$\\
+
+$(1 + x)^n \ge nx + 1$\\
+
+$(1 + x)^n(1 + x) \ge (nx + 1)(1 + x)$\\
+
+$(1 + x)^n + 1 \ge nx + nx^2 + 1 + x$\\
+
+Asumimos que el $nx^2$ es el unico positivo en el lado derecho, por lo que, si lo quitamos, tendriamos que el lado derecho es menor al lado izquierdo\\
+
+$(1 + x)^n + 1 \ge nx + x + 1$\\
+
+$(1 + x)^n + 1 \ge x(n + 1) + 1$ 
+
+\end{document}
