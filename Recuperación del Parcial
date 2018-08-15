@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{tabto}
+\usepackage{fancyhdr}
+\usetikzlibrary{arrows}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Ejercicio 1}
+
+\begin{center}
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=3cm,
+                    thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) {1};
+  \node[main node] (2) [right of=1] {2};
+  \node[main node] (3) [below right of=2] {3};
+  \node[main node] (4) [above right of=3] {4};
+  \node[main node] (5) [below of=1, left of=6] {5};
+  \node[main node] (6) [below left of=3] {6};
+  \node[main node] (7) [below right of=3] {7};
+
+  \path[every node/.style={font=\sffamily\small}]
+    (1) edge node [left] {} (2)
+        edge [bend left=45] node [above right] {} (4)
+		edge node [left] {} (3)
+		edge node [left] {} (5)
+		edge node [left] {} (6)
+    (2) edge node [left] {} (3)
+    	edge node [left] {} (4)
+    	edge node [left] {} (5)
+    	edge node [left] {} (6)
+    (3) edge node [left] {} (5)
+    	edge node [left] {} (6)
+    	edge node [left] {} (7)
+    (4)	edge node [left] {} (3)
+    	edge node [left] {} (7)
+    (5)	edge node [left] {} (6);
+
+\end{tikzpicture}
+
+\end{center}
+
+De representar graficamente el conjunto de puentes por vertices, nos damos cuenta que, siendo número impar, no existe forma de que se pase por todos los puentes sin repetir al menos uno.\\
+
+\begin{center}
+
+VERTICES = [(1,5),(6,2),(4,3)]
+
+\end{center}
+
+\section{Ejercicio 2}
+
+$\sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}$\\
+
+donde $\sum_{i=1}^{n}i=1+2+3+4+\ \ldots\ +n$.\\
+
+$\sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}$\\
+
+$\sum_{i=1}^{n}i=1+2+3+4+\ \ldots\ +k$.\\
+
+$\sum_{i=1}^{k}{i}=\frac{k(k+1)}{2}$
+
+$\sum_{i=1}^{k}i=1+2+3+4+\ \ldots\ +k+(k+1)$.\\
+
+$\sum_{i=1}^{k}{i}=\frac{(k+1)(k+2)}{2}$\\
+
+$ s(k+1) = s(k) + (k+1) $\\
+
+$\sum_{i=1}^{k}{i}=\sum_{i=1}^{k}{i}+(k+1)$\\
+
+$\sum_{i=1}^{k}{i}=\frac{k(k+1)}{2}+(k+1)$\\
+
+$\sum_{i=1}^{k}{i}=\frac{k(k+1)+2(k+1)}{2}$\\
+
+$\sum_{i=1}^{k}{i}=\frac{(k+1)(k+2)}{2}$\\
+
+\section{Pregunta 3}
+
+\section{Pregunta 4}
+
+$a\oplus b = b\oplus a$\\
+
+$P(0) = a + b = b + a$\\
+
+$a(0) = 0 + b = b, b + 0 = b$\\
+
+$P(a) = a + b = b + a$\\
+
+$P(s(a)) = s(a) + b = b + s(a)$\\
+
+$b + s(a) = s(b + a)= s(a + b)$\\
+
+${s(a + b) = s(a) + b}$\\
+
+\section{Pregunta 5}\\
+
+$a\geq b =$
+$\left\{
+\begin{array}{ll}
+s(o)  & \mbox{si } b = o \\
+o & \mbox{si } a = o \\
+i\geq j & \mbox{si } a = s(i)\ \&\ b = s(j)
+\end{array}
+\right.$\\
+                
+$(n + n \ge n)$\\
+
+$n = s(0)$\\
+
+$s(0) + s(0) \ge s(0)$\\
+
+$s(s(0)) \ge s(0)$\\
+
+$s(s(0)) - s(0) \ge 0$\\
+
+$s(0) \ge 0$
+
+\end{document}
+
